@@ -33,14 +33,14 @@ def predict_datapoint():
         predict=model.predict(new_data)
 
         if predict[0]==1:
-            result="Diabetic"
+            result="Person is Positive"
         else:
-            result="Non-Diabetic"
+            result="Person is Negative"
 
-        return render_template('index.html',result = result)
+        return render_template('index.html' ,result = result)
 
-    else:
-        return render_template('index.html')
+    # else:
+    #     return render_template('index.html')
 
 if __name__=="__main__":
     app.run(host="0.0.0.0")
